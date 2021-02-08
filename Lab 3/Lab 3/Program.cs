@@ -6,57 +6,23 @@ using System.Threading.Tasks;
 
 namespace Lab_3
 {
-   
-         class Student
+    class Program
+    {
+        static void Main(string[] args)
         {
-            private string name;
-            private string id;
-            private string department;
-            private float cgpa;
-
-            public void  ShowInfo()
-            {
-                Console.WriteLine("Name: " + name);
-                Console.WriteLine("ID: " + id);
-                Console.WriteLine("Department: " + department);
-                Console.WriteLine("CGPA: " + cgpa);
-            }
-
-            public void SetName(string name)
-            {
-                this.name = name;
-            }
-            public void SetID(string id)
-            {
-                this.id = id;
-            }
-            public void SetDepartment(string department)
-            {
-                this.department = department;
-            }
-            public void SetCGPA(float cgpa)
-            {
-                this.cgpa = cgpa;
-            }
-
-            public string getName()
-            {
-                return name;
-            }
-            public string getID()
-            {
-                return id;
-            }
-            public string getDepartment()
-            {
-                return department;
-            }
-            public float getCGPA()
-            {
-                return cgpa;
-            }
-        }
-
+            Student student = new Student("Ehsanuzzaman", "19-39823-1", "CSE", 3.80);
+            student.ShowInfo();
+            Console.WriteLine();
+            Triangle triangle = new Triangle(2, 4, 6);
+            triangle.TestTriangle();
+            Console.WriteLine();
+            Account account = new Account("Ehsanuzzaman", "454ES5455", 50000);
+            account.Deposit(4000);
+            account.Withdraw(2000);
+            Console.WriteLine();
+            Course courses = new Course("Object Oriented Programming 2", "25455", 3);
+            courses.ShowCourseInfo();
+            Console.ReadKey();
         }
     }
 }
