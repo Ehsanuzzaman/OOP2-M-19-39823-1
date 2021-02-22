@@ -10,6 +10,36 @@ namespace Lab_5
     {
         static void Main(string[] args)
         {
+            Account a1 = new Account("Ehsan", "39823", 15000);
+            a1.ShowInfo();
+            a1.deposit(2000);
+            a1.withdraw(5000);
+            a1.Transfer(200, a1);
+            Console.WriteLine("---------------------");
+            Account a2 = new Account("Sobuz", "39806", 5000);
+            a2.ShowInfo();
+            a1.deposit(2000);
+            a1.withdraw(5000);
+            a2.Transfer(200, a1);
+            Console.WriteLine("---------------------");
+            savings s1 = new savings("Alimul", "39831", 2000);
+            s1.ShowInfo();
+            s1.withdraw(500);
+            Console.WriteLine("---------------------");
+            Special_current s2 = new Special_current("Imrul", "39875", 15000);
+            s2.ShowInfo();
+            s2.withdraw(3000);
+            Console.WriteLine("---------------------");
+            Fixed f1 = new Fixed("Kamrul", "39777", 10000);
+            f1.ShowInfo();
+            f1.withdraw(3000);
+            Console.WriteLine();
+            Console.WriteLine("---------------------");
+            Overdraft o = new Overdraft("Nisho", "39811", 10000);
+            o.ShowInfo();
+            o.withdraw(200);
+            Console.WriteLine();
+
         }
     }
 }
